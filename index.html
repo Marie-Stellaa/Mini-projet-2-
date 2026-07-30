@@ -6,6 +6,8 @@
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body> 
     <!--NAVBAR-->
@@ -314,6 +316,63 @@
     </div>
   </footer>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="script.js"></script>
+   <script >
+document.addEventListener("DOMContentLoaded", () => {
+ const navbar = document.getElementById("mainNavbar");
+
+  const handleScroll = () => {
+    if (window.scrollY > 40) {
+      navbar.classList.add("navbar-scrolled");
+    } else {
+      navbar.classList.remove("navbar-scrolled");
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+   const navMenu = document.getElementById("navMenu");
+  const navLinks = navMenu.querySelectorAll(".nav-link");
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navMenu.classList.contains("show")) {
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navMenu);
+        bsCollapse.hide();
+      }
+    });
+  });
+   const form = document.getElementById("contactForm");
+  const formAlert = document.getElementById("formAlert");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();  // empêche tout envoi / rechargement
+    event.stopPropagation();
+
+    if (form.checkValidity()) {
+      formAlert.classList.remove("d-none");
+      form.classList.add("was-validated");
+    } else {
+      formAlert.classList.add("d-none");
+      form.classList.add("was-validated");
+    }
+  }, false);
+ document.getElementById("year").textContent = new Date().getFullYear();
+ const revealTargets = document.querySelectorAll(
+    ".section-title, .section-subtitle, .skill-card, .project-card, .about-image-wrap, .code-card"
+  );
+  revealTargets.forEach((el) => el.classList.add("reveal"));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealTargets.forEach((el) => observer.observe(el));
+
+});
+   </script>
 </body>
 </html>
