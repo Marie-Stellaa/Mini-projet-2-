@@ -188,6 +188,113 @@
     </div>
   </section>
 
+  <!--section PROJETS-->
+  <section id="projets" class="section-block bg-light-alt">
+    <div class="container">
+      <p class="eyebrow-mono text-center">// projets</p>
+      <h2 class="section-title text-center">Quelques réalisations</h2>
+      <p class="section-subtitle text-center">Des projets fictifs qui illustrent mon apprentissage.</p>
+
+      <div class="row g-4 mt-4">
+
+        <!-- Projet 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-image-wrap">
+              <img src="images/projet1-focus-launch.svg" alt="Aperçu du site vitrine pour une boutique de mode" class="img-fluid">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Boutique de Mode</h3>
+              <p class="project-desc">Site vitrine élégant pour une marque de mode, pensé pour mettre en valeur les collections.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span>
+              </div>
+              <a href="#" class="btn btn-project">Voir le projet <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+         <!-- Projet 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-image-wrap">
+              <img src="images/project-students.svg" alt="Aperçu de l'application de gestion d'étudiants" class="img-fluid">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Gestion d'Étudiants</h3>
+              <p class="project-desc">Application web pour suivre les étudiants, leurs classes et leur présence.</p>
+              <div class="project-tags">
+                <span class="tag">JavaScript</span><span class="tag">Bootstrap</span>
+              </div>
+              <a href="#" class="btn btn-project">Voir le projet <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="project-card">
+            <div class="project-image-wrap">
+              <img src="images/project-portfolio.svg" alt="Aperçu d'un portfolio personnel" class="img-fluid">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Portfolio Personnel</h3>
+              <p class="project-desc">Ce site même&nbsp;: une vitrine personnelle propre, moderne et responsive.</p>
+              <div class="project-tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+              </div>
+              <a href="#" class="btn btn-project">Voir le projet <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+<!--section contacts-->
+<section id="contact" class="section-block">
+    <div class="container">
+      <p class="eyebrow-mono text-center">// contact</p>
+      <h2 class="section-title text-center">Discutons ensemble</h2>
+      <p class="section-subtitle text-center">Une question, une opportunité&nbsp;? Écrivez-moi.</p>
+
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-7">
+          <form id="contactForm" class="contact-form needs-validation" novalidate>
+
+            <div class="mb-3">
+              <label for="nom" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="nom" name="nom" placeholder="Votre nom complet" required minlength="2">
+              <div class="valid-feedback">Merci&nbsp;!</div>
+              <div class="invalid-feedback">Veuillez indiquer votre nom (2 caractères minimum).</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="votre@email.com" required>
+              <div class="valid-feedback">Adresse valide&nbsp;!</div>
+              <div class="invalid-feedback">Veuillez indiquer une adresse email valide.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message..." required minlength="10"></textarea>
+              <div class="valid-feedback">Message prêt à être envoyé&nbsp;!</div>
+              <div class="invalid-feedback">Le message doit contenir au moins 10 caractères.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary-custom w-100">Envoyer le message</button>
+
+            <!-- Message de confirmation (démo, sans envoi réel) -->
+            <div id="formAlert" class="form-alert-demo mt-3 d-none">
+              <i class="bi bi-check-circle-fill"></i>
+              Ceci est une démonstration&nbsp;: aucun message n'a réellement été envoyé.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--footer-->
   
 </body>
 </html>
